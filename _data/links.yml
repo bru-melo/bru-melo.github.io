@@ -1,0 +1,17 @@
+# Profile links shown in the header and contact section.
+# icon: one of orcid, github, zenodo, linkedin, researchgate, email
+- name: ORCID
+  icon: orcid
+  url: https://orcid.org/0000-0002-9007-733X
+- name: GitHub
+  icon: github
+  url: https://github.com/bru-melo
+- name: Zenodo
+  icon: zenodo
+  url: https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Chagas%20de%20Melo%2C%20Bruna%22
+- name: ResearchGate
+  icon: researchgate
+  url: https://www.researchgate.net/profile/Bruna-Chagas-De-Melo-2
+- name: LinkedIn
+  icon: linkedin
+  url: https://www.linkedin.com/in/brumelo/

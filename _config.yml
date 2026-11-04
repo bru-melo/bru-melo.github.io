@@ -1,0 +1,30 @@
+# ------------------------------------------------------------------
+#  Site settings — edit these first
+# ------------------------------------------------------------------
+title: Bruna Chagas de Melo
+short_name: Bru
+role: Seismologist · Postdoctoral Researcher
+affiliation: Dublin Institute for Advanced Studies (DIAS)
+location: Dublin, Ireland
+tagline: >-
+  I work on seismic imaging across scales, from the South American upper
+  mantle to the Irish crust. My current research uses Distributed Acoustic
+  Sensing on existing telecom fibre to monitor cities and the deep ocean.
+description: >-
+  Bruna Chagas de Melo, seismologist at DIAS. Seismic tomography, Distributed
+  Acoustic Sensing (DAS) on urban telecom fibre, publications, datasets and code.
+
+email: bmeloseismo@gmail.com
+# Square photo (replace the file to change it)
+photo: /assets/img/photo.jpg
+# Add your CV at assets/cv/cv.pdf, then uncomment:
+# cv_pdf: /assets/cv/cv.pdf
+
+# If the repo is named <username>.github.io leave baseurl empty.
+# If it is a project repo (e.g. github.com/bru-melo/website) set baseurl: "/website"
+url: "https://bru-melo.github.io"
+baseurl: ""
+
+markdown: kramdown
+permalink: /blog/:year/:title/
+exclude: [README.md, Gemfile, Gemfile.lock, vendor]

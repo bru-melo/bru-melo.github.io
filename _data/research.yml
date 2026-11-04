@@ -1,0 +1,45 @@
+# Research themes, shown as cards near the top. Keep each blurb to 2–3 sentences.
+# status: now | past   (now = labelled "Current")
+- title: SmartScape
+  subtitle: DAS on Dublin's telecom fibre
+  status: now
+  years: 2025–now
+  blurb: >-
+    Turning an 80 km telecom fibre loop under Dublin into a city-scale
+    Distributed Acoustic Sensing array, to map traffic, environmental noise and
+    vibration, and conditions in underground ducts. I lead the deployment and
+    the processing pipeline in this first iCRAG–CONNECT collaboration, with
+    Dublin City Council and Asiera.
+  partners: [DIAS, iCRAG, CONNECT, Dublin City Council, Asiera]
+
+- title: SolasMara
+  subtitle: Listening to the deep North Atlantic
+  status: now
+  years: Research Ireland Postdoctoral Fellowship
+  blurb: >-
+    Using the IRIS submarine cable between Ireland and Iceland (~1,700 km) to
+    monitor deep North Atlantic circulation with DAS and microwave-frequency
+    fibre interferometry.
+  partners: [DIAS, Research Ireland]
+
+- title: The Irish crust
+  subtitle: Quarry blasts & legacy profiles
+  status: past
+  years: 2024–2025
+  blurb: >-
+    Recovered legacy refraction models into open formats and built a 3-D
+    P-wave tomography model of the Irish crust from quarry blasts and local
+    earthquakes. The resulting 1-D model is being prepared for adoption by the
+    Irish National Seismic Network.
+  partners: [DIAS, Geological Survey Ireland]
+
+- title: SACI-24
+  subtitle: The South American lithosphere
+  status: past
+  years: 2019–2024
+  blurb: >-
+    A continental shear-velocity model built from ~970,000 seismograms,
+    resolving cratonic fragments, lithospheric thickness and its links to
+    flood basalts, intraplate magmatism and kimberlites. Gondwana Research
+    Best Paper of 2025.
+  partners: [DIAS, Trinity College Dublin]

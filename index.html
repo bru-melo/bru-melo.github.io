@@ -1,0 +1,287 @@
+---
+layout: default
+---
+{%- assign cv = site.data.cv -%}
+{%- assign me = "Chagas de Melo, B." -%}
+{%- assign me_strong = "<strong>Chagas de Melo, B.</strong>" -%}
+{%- assign pubs = site.data.publications | where_exp: "p", "p.type != 'in-prep'" | sort: "year" | reverse -%}
+{%- assign inprep = site.data.publications | where: "type", "in-prep" -%}
+{%- assign current = site.data.research | where: "status", "now" -%}
+{%- assign featured = pubs | where: "featured", true -%}
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-traces">{% include traces.svg %}</div>
+  <div class="wrap hero-inner">
+    <div class="portrait">
+      {% if site.photo %}
+        <img src="{{ site.photo | relative_url }}" alt="Portrait of {{ site.title }}" width="220" height="220">
+      {% else %}
+        <span class="initials" aria-hidden="true">BM</span>
+      {% endif %}
+    </div>
+    <div class="hero-text">
+      <h1>{{ site.title }}</h1>
+      <p class="role">{{ site.role }}<br><span>{{ site.affiliation }} · {{ site.location }}</span></p>
+      <p class="tagline">{{ site.tagline }}</p>
+      <ul class="profiles" aria-label="Profiles">
+        <li><a href="mailto:{{ site.email }}">{% include icon.html name="email" %}<span>Email</span></a></li>
+        {% for l in site.data.links %}
+        <li><a href="{{ l.url }}">{% include icon.html name=l.icon %}<span>{{ l.name }}</span></a></li>
+        {% endfor %}
+        {% if site.cv_pdf %}<li><a href="{{ site.cv_pdf | relative_url }}">{% include icon.html name="doc" %}<span>CV (PDF)</span></a></li>{% endif %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AT A GLANCE ============ -->
+<section id="overview" class="section wrap overview">
+  <h2 class="sec-title">At a glance</h2>
+  <p class="sec-lede">My work has moved from imaging continents with earthquake data to sensing cities and the ocean through fibre-optic cables. Throughout, the aim is to get more out of seismic data and apply it to problems with local impact.</p>
+  <div class="glance">
+    <div class="glance-col">
+      <h3 class="glance-h">Now</h3>
+      {%- assign job = cv.experience | first %}
+      <p class="glance-lead"><strong>{{ job.title }}</strong><br>{{ job.place }}</p>
+      <ul class="glance-list">
+        {% for r in current %}<li><a href="#research"><strong>{{ r.title }}</strong></a>: {{ r.subtitle }}</li>{% endfor %}
+      </ul>
+      <h3 class="glance-h">Education</h3>
+      <ul class="glance-list">
+        {% for e in cv.education %}{% unless e.title contains "placement" %}<li><strong>{{ e.title }}</strong>, {{ e.place }} <span class="muted mono-sm">{{ e.years | split: "–" | last }}</span></li>{% endunless %}{% endfor %}
+      </ul>
+    </div>
+    <div class="glance-col">
+      <h3 class="glance-h">Selected publications</h3>
+      <ul class="glance-list pubs-short">
+        {% for p in featured %}
+        <li>
+          <a href="https://doi.org/{{ p.doi }}">{{ p.title }}</a>
+          <span class="muted"><em>{{ p.journal | default: p.venue }}</em> ({{ p.year }})</span>
+          {% if p.award %}<span class="tag award">{{ p.award }}</span>{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+      <a class="more" href="#publications">All {{ pubs.size }} publications →</a>
+    </div>
+    <div class="glance-col">
+      <h3 class="glance-h">Awards</h3>
+      <ul class="glance-list">
+        {% for a in cv.awards limit: 2 %}<li>{{ a.title }} <span class="muted mono-sm">{{ a.year }}</span></li>{% endfor %}
+      </ul>
+      <h3 class="glance-h">Open data &amp; code</h3>
+      <ul class="glance-list">
+        {% for d in site.data.datasets %}<li><a href="https://doi.org/{{ d.doi }}">{{ d.name }}</a> <span class="muted">dataset</span></li>{% endfor %}
+        {% for sw in site.data.software %}<li><a href="{{ sw.repo }}">{{ sw.name }}</a> <span class="muted">software</span></li>{% endfor %}
+      </ul>
+      <a class="more" href="#data-code">Data &amp; code →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FULL RECORD ============ -->
+<div class="wrap record-head">
+  <h2 class="record-title">Full record</h2>
+  <button type="button" class="expand-all" data-expand-all>Expand all</button>
+</div>
+
+<!-- ============ RESEARCH ============ -->
+<details id="research" class="fold wrap">
+  <summary><h2 class="sec-title"><span class="num">01</span>Research</h2><span class="fold-count">{{ site.data.research.size }} projects</span></summary>
+  <div class="fold-body">
+  <div class="cards research">
+    {% for r in site.data.research %}
+    <article class="card r-card {{ r.status }}">
+      <p class="r-label">{% if r.status == "now" %}<span class="current">Current</span>{% endif %}{{ r.years }}</p>
+      <h3>{{ r.title }}</h3>
+      <p class="r-sub">{{ r.subtitle }}</p>
+      <p>{{ r.blurb }}</p>
+      {% if r.partners %}<p class="r-meta">{{ r.partners | join: " · " }}</p>{% endif %}
+    </article>
+    {% endfor %}
+  </div>
+</div>
+</details>
+
+<!-- ============ PUBLICATIONS ============ -->
+<details id="publications" class="fold wrap">
+  <summary><h2 class="sec-title"><span class="num">02</span>Publications</h2><span class="fold-count">{{ pubs.size }} publications · {{ inprep.size }} in preparation</span></summary>
+  <div class="fold-body">
+  <ol class="pubs">
+    {% for p in pubs %}
+    <li class="pub">
+      <span class="pub-year">{{ p.year }}</span>
+      <div class="pub-body">
+        <p class="pub-title">
+          {% if p.doi %}<a href="https://doi.org/{{ p.doi }}">{{ p.title }}</a>{% elsif p.url %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}
+        </p>
+        <p class="pub-authors">{{ p.authors | replace: me, me_strong }}</p>
+        <p class="pub-venue"><em>{{ p.venue }}</em>{% if p.note %} · {{ p.note }}{% endif %}</p>
+        <p class="pub-links">
+          {% if p.award %}<span class="tag award">{{ p.award }}</span>{% endif %}
+          {% if p.type == "outreach" %}<span class="tag">Science communication</span>{% endif %}
+          {% if p.doi %}<a class="tag link" href="https://doi.org/{{ p.doi }}">DOI</a>{% endif %}
+          {% if p.data %}<a class="tag link" href="{{ p.data }}">Data</a>{% endif %}
+          {% if p.code %}<a class="tag link" href="{{ p.code }}">Code</a>{% endif %}
+        </p>
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+  {% if inprep.size > 0 %}
+  <div class="inprep">
+    <h3 class="cv-h">In preparation</h3>
+    <ul>
+      {% for p in inprep %}<li>{{ p.title }}. <span>{{ p.authors | replace: me, me_strong }}</span></li>{% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</div>
+</details>
+
+<!-- ============ DATA & CODE ============ -->
+<details id="data-code" class="fold wrap">
+  <summary><h2 class="sec-title"><span class="num">03</span>Data &amp; code</h2><span class="fold-count">{{ site.data.datasets.size }} datasets · {{ site.data.software.size }} software</span></summary>
+  <div class="fold-body">
+  <p class="sec-lede">Models and datasets are archived in public repositories with DOIs; software is on GitHub.</p>
+
+  <div class="filters" role="group" aria-label="Filter by type">
+    <button type="button" class="filter on" data-filter="all">All</button>
+    <button type="button" class="filter" data-filter="dataset">Datasets</button>
+    <button type="button" class="filter" data-filter="code">Software</button>
+  </div>
+
+  <div class="cards dc">
+    {% for d in site.data.datasets %}
+    <article class="card dc-card" data-kind="dataset">
+      <p class="kind">Dataset · {{ d.repo }} · {{ d.year }}</p>
+      <h3><a href="https://doi.org/{{ d.doi }}">{{ d.name }}</a></h3>
+      <p>{{ d.title }}</p>
+      <p class="dc-meta">{{ d.format }}</p>
+      <div class="dc-actions">
+        <a class="tag link mono" href="https://doi.org/{{ d.doi }}">doi:{{ d.doi }}</a>
+        {% if d.cite %}<button type="button" class="copy" data-copy="{{ d.cite | escape }}">Copy citation</button>{% endif %}
+      </div>
+    </article>
+    {% endfor %}
+    {% for s in site.data.software %}
+    <article class="card dc-card" data-kind="code">
+      <p class="kind">Software · {{ s.language }}</p>
+      <h3><a href="{{ s.repo }}">{{ s.name }}</a></h3>
+      <p>{{ s.blurb }}</p>
+      <div class="dc-actions">
+        <a class="tag link" href="{{ s.repo }}">{% include icon.html name="github" %} Repository</a>
+        {% if s.doi %}<a class="tag link" href="https://doi.org/{{ s.doi }}">DOI</a>{% endif %}
+        {% if s.install %}<button type="button" class="copy mono" data-copy="{{ s.install | escape }}">{{ s.install }}</button>{% endif %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</div>
+</details>
+
+<!-- ============ FIELDWORK ============ -->
+<details id="fieldwork" class="fold wrap">
+  <summary><h2 class="sec-title"><span class="num">04</span>Fieldwork</h2><span class="fold-count">{{ site.data.fieldwork.size }} campaigns</span></summary>
+  <div class="fold-body">
+  <ul class="entries">
+    {% for f in site.data.fieldwork %}
+    <li class="entry">
+      <span class="entry-years">{{ f.years }}</span>
+      <div>
+        <h3>{{ f.title }}</h3>
+        <p class="entry-meta">{{ f.place }}{% if f.role %} · {{ f.role }}{% endif %}</p>
+        <p>{{ f.detail }}</p>
+        {% if f.kit %}<p class="tags">{% for k in f.kit %}<span class="tag mono">{{ k }}</span>{% endfor %}</p>{% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+</details>
+
+<!-- ============ OUTREACH ============ -->
+<details id="outreach" class="fold wrap">
+  <summary><h2 class="sec-title"><span class="num">05</span>Outreach &amp; science communication</h2><span class="fold-count">{{ site.data.outreach.size }} activities</span></summary>
+  <div class="fold-body">
+  <ul class="entries">
+    {% for o in site.data.outreach %}
+    <li class="entry">
+      <span class="entry-years">{{ o.years }}</span>
+      <div>
+        <h3>{{ o.title }}</h3>
+        <p>{{ o.detail }}</p>
+        {% if o.link %}<p><a class="tag link" href="{{ o.link }}">{{ o.link_label | default: "Link" }} →</a></p>{% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+</details>
+
+<!-- ============ CV ============ -->
+<details id="cv" class="fold wrap">
+  <summary><h2 class="sec-title"><span class="num">06</span>Curriculum vitae</h2><span class="fold-count">positions · education · awards · service · skills</span></summary>
+  <div class="fold-body">
+  <div class="cv-grid">
+    <div>
+      <h3 class="cv-h">Positions</h3>
+      <ul class="timeline">
+        {% for e in cv.experience %}
+        <li><span class="t-years">{{ e.years }}</span><strong>{{ e.title }}</strong>, {{ e.place }}<p>{{ e.detail }}</p></li>
+        {% endfor %}
+      </ul>
+      <h3 class="cv-h">Education</h3>
+      <ul class="timeline">
+        {% for e in cv.education %}
+        <li><span class="t-years">{{ e.years }}</span><strong>{{ e.title }}</strong>, {{ e.place }}<p>{{ e.detail }}</p></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div>
+      <h3 class="cv-h">Awards</h3>
+      <ul class="plain">
+        {% for a in cv.awards %}<li><span class="t-years">{{ a.year }}</span>{{ a.title }}{% if a.detail %} <span class="muted">({{ a.detail }})</span>{% endif %}</li>{% endfor %}
+      </ul>
+      <h3 class="cv-h">Service &amp; teaching</h3>
+      <ul class="plain">
+        {% for s in cv.service %}<li><span class="t-years">{{ s.years }}</span>{{ s.title }}{% if s.detail %}<p class="muted">{{ s.detail }}</p>{% endif %}</li>{% endfor %}
+      </ul>
+      <h3 class="cv-h">Skills</h3>
+      <p class="tags">{% for s in cv.skills %}<span class="tag">{{ s }}</span>{% endfor %}</p>
+      <p class="tags">{% for s in cv.tools %}<span class="tag mono">{{ s }}</span>{% endfor %}</p>
+      <p class="tags">{% for s in cv.languages %}<span class="tag">{{ s }}</span>{% endfor %}</p>
+      {% if site.cv_pdf %}<p><a class="btn" href="{{ site.cv_pdf | relative_url }}">{% include icon.html name="doc" %} Full CV (PDF)</a></p>{% endif %}
+    </div>
+  </div>
+</div>
+</details>
+
+<!-- ============ BLOG (shows only when there are posts) ============ -->
+{% if site.posts.size > 0 %}
+<details id="blog" class="fold wrap">
+  <summary><h2 class="sec-title"><span class="num">07</span>Notes</h2><span class="fold-count">{{ site.posts.size }} post{% if site.posts.size != 1 %}s{% endif %}</span></summary>
+  <div class="fold-body">
+  <ul class="posts">
+    {% for post in site.posts limit: 6 %}
+    <li>
+      <a href="{{ post.url | relative_url }}">
+        <span class="post-date">{{ post.date | date: "%-d %b %Y" }}</span>
+        <span class="post-title">{{ post.title }}</span>
+        <span class="post-excerpt">{{ post.excerpt | strip_html | truncate: 140 }}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+</details>
+{% endif %}
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="section wrap contact">
+  <h2 class="sec-title"><span class="num">{% if site.posts.size > 0 %}08{% else %}07{% endif %}</span>Contact</h2>
+  <p class="sec-lede">I'm happy to discuss DAS, seismic tomography, open data, collaborations and outreach.</p>
+  <p><a class="btn" href="mailto:{{ site.email }}">{% include icon.html name="email" %} {{ site.email }}</a></p>
+  <p class="address">Geophysics Section, Dublin Institute for Advanced Studies<br>5 Merrion Square North, Dublin 2, Ireland</p>
+</section>

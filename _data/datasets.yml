@@ -1,0 +1,19 @@
+# Datasets and models. The site links out; data stays in its repository.
+# cite: the text copied by the "copy citation" button
+- name: SACI-24
+  title: S-wave velocity model of South America and surrounding regions
+  repo: IRIS Earth Model Collaboration
+  year: 2025
+  doi: 10.17611/dp/emc.2025.saci24.1
+  format: NetCDF · 3-D model
+  tags: [tomography, south-america]
+  cite: "Chagas de Melo, B., Lebedev, S. & Celli, N. (2025). S-wave velocity model of South America and surrounding regions [Dataset]. IRIS EMC. https://doi.org/10.17611/dp/emc.2025.saci24.1"
+
+- name: SKS splitting, SE South America
+  title: Mantle anisotropy and asthenospheric flow around cratons in southeastern South America
+  repo: Zenodo
+  year: 2018
+  doi: 10.5281/zenodo.1204671
+  format: SKS splitting measurements
+  tags: [anisotropy, south-america]
+  cite: "Chagas de Melo, B. & Assumpção, M. (2018). Mantle anisotropy and asthenospheric flow around cratons in southeastern South America [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.1204671"

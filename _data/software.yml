@@ -1,0 +1,24 @@
+# Code and packages. Add `install:` for a pip line, `doi:` once a release is on Zenodo.
+- name: legacy-lines
+  repo: https://github.com/bru-melo/legacy-lines
+  language: Jupyter / Python
+  blurb: >-
+    Reads legacy active-source refraction models stored in the RayInvr format
+    and converts them to ASCII and NetCDF, so decades of Irish crustal studies
+    can be reused.
+  tags: [legacy-data, ireland]
+
+- name: SeisBlast
+  repo: https://github.com/bru-melo/SeisBlast
+  language: Jupyter / Python
+  blurb: >-
+    Sorting, visualising and processing quarry-blast seismic data, from raw
+    records to travel-time picks.
+  tags: [quarry-blasts, ireland]
+
+# Uncomment when public:
+# - name: PyEire
+#   repo: https://github.com/bru-melo/PyEire
+#   language: Python
+#   blurb: Reading and plotting tools for the 3-D P-wave model of the Irish crust.
+#   tags: [tomography, ireland]

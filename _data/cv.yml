@@ -1,0 +1,53 @@
+experience:
+  - years: 2025–now
+    title: Postdoctoral Researcher
+    place: Dublin Institute for Advanced Studies
+    detail: SmartScape — DAS on Dublin City telecom fibres. Funded by iCRAG & CONNECT.
+  - years: 2024–2025
+    title: Research Assistant
+    place: Dublin Institute for Advanced Studies
+    detail: P-wave velocity structure of the Irish crust from quarry blasts and legacy profiles.
+
+education:
+  - years: 2019–2024
+    title: PhD in Seismology
+    place: DIAS & Trinity College Dublin
+    detail: "Seismic tomography of South America: continental lithosphere, subduction-zone structures, and the origins of intraplate magmatism. Supervisor: Sergei Lebedev."
+  - years: 2016–2018
+    title: MSc in Geophysics
+    place: Universidade de São Paulo, Brazil
+    detail: "Mantle anisotropy and asthenospheric flow around cratons in South America. Supervisor: Marcelo Assumpção."
+  - years: 2013–2014
+    title: Undergraduate placement
+    place: University of Liverpool, UK
+    detail: "Estimating earthquake parameters beneath the Andes. Supervisor: Andreas Rietbrock."
+  - years: 2011–2016
+    title: BSc in Physics
+    place: Universidade Federal de Ouro Preto, Brazil
+    detail: "Non-linear dynamics applied to earthquake prediction. Supervisor: Romuel Machado."
+
+awards:
+  - year: 2025
+    title: Best Paper of 2025, Gondwana Research
+    detail: for SACI-24
+  - year: 2019
+    title: Geophysics Outstanding Master's Dissertation, USP
+  - year: 2017
+    title: Best Poster, Earth's Interior Studies, XXXVIII AAGG
+    detail: La Plata, Argentina
+
+service:
+  - years: 2023–now
+    title: Geophysics representative, DIAS Sustainability Committee
+  - years: 2022–2023
+    title: Early-Career Scientist representative, EGU Seismology Division
+    detail: Co-organised the Seismology 101 short course at EGU 2023.
+  - years: 2021
+    title: Organising committee, IV Brazilian Seismology Symposium
+  - years: 2017
+    title: Teaching assistant & short courses, IAG–USP
+    detail: Elements of Geophysics; Linux, Introduction to Seismology, Surface Waves & Crustal Structure.
+
+skills: [seismic imaging, waveform tomography, DAS processing, anisotropy, spectral analysis, signal processing, data visualisation]
+tools: [Python, Matlab, shell]
+languages: [Portuguese (native), English (fluent)]

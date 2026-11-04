@@ -1,0 +1,72 @@
+# One entry per publication, newest first.
+# Your name is highlighted automatically wherever "Chagas de Melo, B." appears.
+# Optional fields: doi, url, data, code, award, note
+# journal: short journal name, used in the "At a glance" list
+# featured: true  -> shown under "Selected publications" at the top
+# type: article | outreach | preprint | in-prep
+
+- title: "The lithosphere of South America from seismic tomography: structure, evolution, and control on tectonics and magmatism"
+  authors: "Chagas de Melo, B., Lebedev, S., Celli, N. L., Gibson, S., De Laat, J. I. & Assumpção, M."
+  venue: "Gondwana Research 138, 139–167"
+  journal: "Gondwana Research"
+  year: 2024
+  type: article
+  doi: 10.1016/j.gr.2024.05.012
+  data: https://doi.org/10.17611/dp/emc.2025.saci24.1
+  award: Best Paper of 2025
+  featured: true
+
+- title: "Mapeamento expõe as estruturas mais antigas da América do Sul"
+  authors: "Fioravante, C. & Chagas de Melo, B."
+  venue: "Revista Pesquisa FAPESP (science communication)"
+  year: 2025
+  type: outreach
+  url: https://revistapesquisa.fapesp.br/mapeamento-expoe-as-estruturas-mais-antigas-da-america-do-sul/
+  note: "English: “Map exposes oldest structures in South America”"
+
+- title: "The upper mantle beneath Asia from seismic tomography, with inferences for the mechanisms of tectonics, seismicity, and magmatism"
+  authors: "Dou, H., Xu, Y., Lebedev, S., Chagas de Melo, B., van der Hilst, R. D., Wang, B. & Wang, W."
+  venue: "Earth-Science Reviews 255, 104841"
+  journal: "Earth-Science Reviews"
+  year: 2024
+  type: article
+  doi: 10.1016/j.earscirev.2024.104841
+
+- title: "Structure and evolution of the Australian plate and underlying upper mantle from waveform tomography with massive data sets"
+  authors: "De Laat, J. I., Lebedev, S., Celli, N. L., Bonadio, R., Chagas de Melo, B. & Rawlinson, N."
+  venue: "Geophysical Journal International 234, 153–189"
+  journal: "Geophysical Journal International"
+  year: 2023
+  type: article
+  doi: 10.1093/gji/ggad062
+
+- title: "Education and public engagement using an active research project: lessons and recipes from the SEA-SEIS North Atlantic Expedition's programme for Irish schools"
+  authors: "Lebedev, S., Bonadio, R., Gómez-García, C., De Laat, J. I., Bérdi, L., Chagas de Melo, B., Farrell, D., Stalling, D., Tirel, C., Collins, L., McCarthy, S., O'Donoghue, B., Schwenk, A., Smyth, M., Bean, C. J. & the SEA-SEIS Team"
+  venue: "Geoscience Communication 2, 143–155"
+  journal: "Geoscience Communication"
+  year: 2019
+  type: outreach
+  doi: 10.5194/gc-2-143-2019
+
+- title: "Mantle anisotropy and asthenospheric flow around cratons in southeastern South America"
+  authors: "Chagas de Melo, B. & Assumpção, M."
+  venue: "Geophysical Journal International 215, 494–506"
+  journal: "Geophysical Journal International"
+  year: 2018
+  type: article
+  doi: 10.1093/gji/ggy376
+  data: https://doi.org/10.5281/zenodo.1204671
+  featured: true
+
+# In preparation — shown in a small "coming soon" list
+- title: "Origin and distribution of the intraplate magmatism of South America"
+  authors: "Chagas de Melo, B. & Lebedev, S."
+  venue: "in preparation"
+  year: 2025
+  type: in-prep
+
+- title: "P-wave velocity structure of the Irish crust from quarry blasts (working title)"
+  authors: "Chagas de Melo, B., et al."
+  venue: "in preparation"
+  year: 2025
+  type: in-prep

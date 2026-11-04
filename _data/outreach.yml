@@ -1,0 +1,33 @@
+# Outreach and science communication, newest first.
+# Fields: years, title, detail, link (optional), link_label (optional)
+
+- years: 2025
+  title: Feature in Revista Pesquisa FAPESP
+  detail: >-
+    Contributed to a feature on my South American tomography work in one of
+    Latin America's leading science-communication magazines.
+  link: https://revistapesquisa.fapesp.br/mapeamento-expoe-as-estruturas-mais-antigas-da-america-do-sul/
+  link_label: Read the article (PT)
+
+- years: 2019–now
+  title: Public science events in Dublin
+  detail: >-
+    Annual hands-on seismology demonstrations for schoolchildren and the
+    general public at Culture Night, Samhain agus Science and the BT Young
+    Scientist & Technology Exhibition.
+
+- years: 2022–2023
+  title: EGU Seismology Division communications
+  detail: >-
+    As Early-Career Scientist representative, ran the Division's social-media
+    channels and early-career communications.
+
+- years: 2018–2019
+  title: SEA-SEIS ship-to-school programme
+  detail: >-
+    Coordinated live video sessions between the research vessel and schools
+    across Ireland and the UK during the ocean-bottom seismometer deployment,
+    then led follow-up classroom sessions where students named the
+    seismometers and wrote stories inspired by the science.
+  link: https://doi.org/10.5194/gc-2-143-2019
+  link_label: Paper in Geoscience Communication
