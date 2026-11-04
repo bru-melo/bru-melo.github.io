@@ -29,6 +29,47 @@ baseurl: ""
 # (Without this, Pages adds its default Primer theme.)
 theme: null
 
+# ------------------------------------------------------------------
+#  Search engines and link previews
+# ------------------------------------------------------------------
+# jekyll-seo-tag writes the meta description, canonical URL and
+# Open Graph / Twitter tags (the <title> is set in _layouts/default.html). jekyll-sitemap writes /sitemap.xml.
+# Both are supported by GitHub Pages out of the box.
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+lang: en_IE
+# Shown after your name in the browser tab and Google results
+seo_title_suffix: Seismologist at DIAS, Dublin
+author:
+  name: Bruna Chagas de Melo
+  url: https://bru-melo.github.io
+# Image used when the site is shared (LinkedIn, Bluesky, Slack, ...)
+logo: /assets/img/photo.jpg
+# The photo is square, so use the small square preview card
+twitter:
+  card: summary
+social:
+  name: Bruna Chagas de Melo
+  links:
+    - https://orcid.org/0000-0002-9007-733X
+    - https://github.com/bru-melo
+    - https://www.researchgate.net/profile/Bruna-Chagas-De-Melo-2
+    - https://www.linkedin.com/in/brumelo/
+
+# Paste the codes from Google Search Console / Bing Webmaster Tools here
+# (only the content="..." value), then uncomment.
+# webmaster_verifications:
+#   google: XXXXXXXXXXXXXXXXXXXX
+#   bing: XXXXXXXXXXXXXXXXXXXX
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/photo.jpg
+
 markdown: kramdown
 permalink: /blog/:year/:title/
 exclude: [README.md, Gemfile, Gemfile.lock, vendor]
