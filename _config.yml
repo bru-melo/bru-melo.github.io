@@ -69,6 +69,11 @@ defaults:
       path: ""
     values:
       image: /assets/img/photo.jpg
+  # Google Search Console verification file: keep it, but out of the sitemap
+  - scope:
+      path: "google*.html"
+    values:
+      sitemap: false
 
 markdown: kramdown
 permalink: /blog/:year/:title/
