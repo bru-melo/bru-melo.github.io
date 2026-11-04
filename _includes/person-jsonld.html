@@ -1,0 +1,32 @@
+{%- comment -%}
+  schema.org Person record for the home page, so search engines can tie
+  this site to the same person as the ORCID, GitHub, ResearchGate and
+  LinkedIn profiles (sameAs). Profile links come from _config.yml social.links.
+{%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ site.title | jsonify }},
+  "alternateName": {{ site.short_name | jsonify }},
+  "url": {{ site.url | append: site.baseurl | append: "/" | jsonify }},
+  "image": {{ site.photo | absolute_url | jsonify }},
+  "email": {{ site.email | prepend: "mailto:" | jsonify }},
+  "jobTitle": "Seismologist, Postdoctoral Researcher",
+  "description": {{ site.description | strip | jsonify }},
+  "affiliation": {
+    "@type": "ResearchOrganization",
+    "name": "Dublin Institute for Advanced Studies",
+    "alternateName": "DIAS",
+    "url": "https://www.dias.ie/"
+  },
+  "workLocation": { "@type": "Place", "name": {{ site.location | jsonify }} },
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "ORCID",
+    "value": "0000-0002-9007-733X"
+  },
+  "knowsAbout": ["Seismology", "Seismic tomography", "Distributed Acoustic Sensing", "Ambient noise seismology", "Upper mantle structure"],
+  "sameAs": {{ site.social.links | jsonify }}
+}
+</script>

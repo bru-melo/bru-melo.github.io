@@ -36,7 +36,7 @@ entry and change the fields. Your name is bolded automatically in author lists.
 
 **Photo:** add a square image at `assets/img/photo.jpg` and uncomment `photo:` in `_config.yml`.
 **CV PDF:** add it at `assets/cv/cv.pdf` and uncomment `cv_pdf:`. This adds a button in the hero and CV section.
-**Blog:** delete the sample post if you don't want a Notes section yet. The section hides itself when `_posts/` is empty.
+**Blog:** posts go in `_posts/`. While it is empty, the Notes section shows "Cool updates to come."
 
 ## Preview locally (optional)
 
