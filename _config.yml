@@ -25,6 +25,10 @@ photo: /assets/img/photo.jpg
 url: "https://bru-melo.github.io"
 baseurl: ""
 
+# No GitHub Pages theme: the site has its own layouts and stylesheet.
+# (Without this, Pages adds its default Primer theme.)
+theme: null
+
 markdown: kramdown
 permalink: /blog/:year/:title/
 exclude: [README.md, Gemfile, Gemfile.lock, vendor]

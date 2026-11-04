@@ -29,7 +29,7 @@ For your own domain, add it under Settings → Pages → Custom domain.
 | Work, education, awards, service, skills | `_data/cv.yml` |
 | Profile links (ORCID, GitHub…) | `_data/links.yml` |
 | Blog posts | `_posts/YYYY-MM-DD-title.md` |
-| Colours & fonts | top of `assets/css/style.css` |
+| Colours & fonts | top of `assets/css/site.css` |
 
 Adding a paper, dataset or package is one new entry in the matching YAML file: copy an existing
 entry and change the fields. Your name is bolded automatically in author lists.
