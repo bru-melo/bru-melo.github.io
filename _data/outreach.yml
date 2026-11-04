@@ -1,6 +1,17 @@
 # Outreach and science communication, newest first.
 # Fields: years, title, detail, link (optional), link_label (optional)
 
+- years: 2026
+  title: Pint of Science Ireland talk
+  detail: >-
+    "Murder on the Luas Express: Tales from a Dark Fibre", a talk on turning a
+    forgotten telecom fibre under Dublin's Luas Green Line into thousands of
+    seismic sensors. Part of the "Shivers, Shakes & Seismic Waves" night at
+    Chillers On The Green, Dublin (3 November), during DIAS's Samhain agus
+    Science festival.
+  link: https://pintofscience.ie/event/shivers-shakes-and-seismic-waves/
+  link_label: Event page
+
 - years: 2025
   title: Feature in Revista Pesquisa FAPESP
   detail: >-
