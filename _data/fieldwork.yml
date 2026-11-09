@@ -1,6 +1,16 @@
 # Field campaigns and deployments, newest first.
 # Fields: years, title, place, role, kit (list of instruments), detail, link (optional)
 
+# CHECK: add ship name, sea area, number of OBSs and project name if wanted
+- years: Nov 2026
+  title: Ocean-bottom seismometer deployment cruise
+  place: Irish offshore, with the Marine Institute
+  role: Scientific party
+  kit: [Ocean-bottom seismometers]
+  detail: >-
+    Ship-based deployment of ocean-bottom seismometers (OBSs), carried out in
+    coordination with the Marine Institute, sailing on 13 November 2026.
+
 - years: 2025–now
   title: SmartScape city-scale DAS deployment
   place: Dublin, Ireland
