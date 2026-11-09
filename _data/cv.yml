@@ -48,6 +48,12 @@ service:
     title: Teaching assistant & short courses, IAG–USP
     detail: Elements of Geophysics; Linux, Introduction to Seismology, Surface Waves & Crustal Structure.
 
+volunteering:
+  - years: 2026–now
+    title: Cat fosterer
+    place: CDPA
+    detail: Caring for and socialising cats ahead of adoption, taking them to vet appointments, and liaising between the CDPA support team and adopters.
+
 skills: [seismic imaging, waveform tomography, DAS processing, anisotropy, spectral analysis, signal processing, data visualisation]
 tools: [Python, Matlab, shell]
 languages: [Portuguese (native), English (fluent)]

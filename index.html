@@ -222,7 +222,7 @@ layout: default
 
 <!-- ============ CV ============ -->
 <details id="cv" class="fold wrap">
-  <summary><h2 class="sec-title"><span class="num">06</span>Curriculum vitae</h2><span class="fold-count">positions · education · awards · service · skills</span></summary>
+  <summary><h2 class="sec-title"><span class="num">06</span>Curriculum vitae</h2><span class="fold-count">positions · education · awards · service · volunteering · skills</span></summary>
   <div class="fold-body">
   <div class="cv-grid">
     <div>
@@ -248,6 +248,12 @@ layout: default
       <ul class="plain">
         {% for s in cv.service %}<li><span class="t-years">{{ s.years }}</span>{{ s.title }}{% if s.detail %}<p class="muted">{{ s.detail }}</p>{% endif %}</li>{% endfor %}
       </ul>
+      {% if cv.volunteering %}
+      <h3 class="cv-h">Volunteer experience</h3>
+      <ul class="plain">
+        {% for v in cv.volunteering %}<li><span class="t-years">{{ v.years }}</span>{{ v.title }}, {{ v.place }}{% if v.detail %}<p class="muted">{{ v.detail }}</p>{% endif %}</li>{% endfor %}
+      </ul>
+      {% endif %}
       <h3 class="cv-h">Skills</h3>
       <p class="tags">{% for s in cv.skills %}<span class="tag">{{ s }}</span>{% endfor %}</p>
       <p class="tags">{% for s in cv.tools %}<span class="tag mono">{{ s }}</span>{% endfor %}</p>
