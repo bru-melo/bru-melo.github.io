@@ -1,0 +1,15 @@
+# "Beyond research": life outside seismology.
+# volunteering fields: years, title, place, detail
+# interests fields: title, items (list of tags)
+
+volunteering:
+  - years: 2026–now
+    title: Cat fosterer
+    place: CDPA
+    detail: Caring for and socialising cats ahead of adoption, taking them to vet appointments, and liaising between the CDPA support team and adopters.
+
+interests:
+  - title: Aerial circus
+    items: [rope, silks, pole dance]
+  - title: Thread arts
+    items: [crochet, sewing, macramé]

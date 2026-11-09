@@ -222,7 +222,7 @@ layout: default
 
 <!-- ============ CV ============ -->
 <details id="cv" class="fold wrap">
-  <summary><h2 class="sec-title"><span class="num">06</span>Curriculum vitae</h2><span class="fold-count">positions · education · awards · service · volunteering · skills</span></summary>
+  <summary><h2 class="sec-title"><span class="num">06</span>Curriculum vitae</h2><span class="fold-count">positions · education · awards · service · skills</span></summary>
   <div class="fold-body">
   <div class="cv-grid">
     <div>
@@ -248,12 +248,6 @@ layout: default
       <ul class="plain">
         {% for s in cv.service %}<li><span class="t-years">{{ s.years }}</span>{{ s.title }}{% if s.detail %}<p class="muted">{{ s.detail }}</p>{% endif %}</li>{% endfor %}
       </ul>
-      {% if cv.volunteering %}
-      <h3 class="cv-h">Volunteer experience</h3>
-      <ul class="plain">
-        {% for v in cv.volunteering %}<li><span class="t-years">{{ v.years }}</span>{{ v.title }}, {{ v.place }}{% if v.detail %}<p class="muted">{{ v.detail }}</p>{% endif %}</li>{% endfor %}
-      </ul>
-      {% endif %}
       <h3 class="cv-h">Skills</h3>
       <p class="tags">{% for s in cv.skills %}<span class="tag">{{ s }}</span>{% endfor %}</p>
       <p class="tags">{% for s in cv.tools %}<span class="tag mono">{{ s }}</span>{% endfor %}</p>
@@ -264,9 +258,33 @@ layout: default
 </div>
 </details>
 
+<!-- ============ BEYOND RESEARCH ============ -->
+{%- assign beyond = site.data.beyond %}
+<details id="beyond" class="fold wrap">
+  <summary><h2 class="sec-title"><span class="num">07</span>Beyond research</h2><span class="fold-count">volunteering · interests</span></summary>
+  <div class="fold-body">
+  <div class="cv-grid">
+    <div>
+      <h3 class="cv-h">Volunteer experience</h3>
+      <ul class="timeline">
+        {% for v in beyond.volunteering %}
+        <li><span class="t-years">{{ v.years }}</span><strong>{{ v.title }}</strong>, {{ v.place }}<p>{{ v.detail }}</p></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div>
+      <h3 class="cv-h">Interests</h3>
+      <ul class="plain">
+        {% for i in beyond.interests %}<li><strong>{{ i.title }}</strong><p class="tags">{% for t in i.items %}<span class="tag">{{ t }}</span>{% endfor %}</p></li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+</details>
+
 <!-- ============ NOTES (blog) ============ -->
 <details id="blog" class="fold wrap">
-  <summary><h2 class="sec-title"><span class="num">07</span>Notes</h2><span class="fold-count">{% if site.posts.size > 0 %}{{ site.posts.size }} post{% if site.posts.size != 1 %}s{% endif %}{% else %}soon{% endif %}</span></summary>
+  <summary><h2 class="sec-title"><span class="num">08</span>Notes</h2><span class="fold-count">{% if site.posts.size > 0 %}{{ site.posts.size }} post{% if site.posts.size != 1 %}s{% endif %}{% else %}soon{% endif %}</span></summary>
   <div class="fold-body">
   {% if site.posts.size > 0 %}
   <ul class="posts">
@@ -288,7 +306,7 @@ layout: default
 
 <!-- ============ CONTACT ============ -->
 <section id="contact" class="section wrap contact">
-  <h2 class="sec-title"><span class="num">08</span>Contact</h2>
+  <h2 class="sec-title"><span class="num">09</span>Contact</h2>
   <p class="sec-lede">I'm happy to discuss DAS, seismic tomography, open data, collaborations and outreach.</p>
   <p><a class="btn" href="mailto:{{ site.email }}">{% include icon.html name="email" %} {{ site.email }}</a></p>
   <p class="address">Geophysics Section, Dublin Institute for Advanced Studies<br>5 Merrion Square North, Dublin 2, Ireland</p>
