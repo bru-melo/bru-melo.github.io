@@ -309,6 +309,6 @@ layout: default
 <section id="contact" class="section wrap contact">
   <h2 class="sec-title"><span class="num">09</span>Contact</h2>
   <p class="sec-lede">I'm happy to discuss DAS, seismic tomography, open data, collaborations and outreach.</p>
-  <p><a class="btn" href="mailto:{{ site.email }}">{% include icon.html name="email" %} {{ site.email }}</a></p>
+  <p><a class="btn" href="mailto:{{ site.email }}">{% include icon.html name="email" %} {{ site.email }}</a>{% if site.email_work %} <a class="btn" href="mailto:{{ site.email_work }}">{% include icon.html name="email" %} {{ site.email_work }}</a>{% endif %}</p>
   <p class="address">Geophysics Section, Dublin Institute for Advanced Studies<br>5 Merrion Square North, Dublin 2, Ireland</p>
 </section>
