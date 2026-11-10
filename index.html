@@ -193,7 +193,7 @@ layout: default
         <h3>{{ f.title }}</h3>
         <p class="entry-meta">{{ f.place }}{% if f.role %} · {{ f.role }}{% endif %}</p>
         <p>{{ f.detail }}</p>
-        {% if f.kit %}<p class="tags">{% for k in f.kit %}<span class="tag mono">{{ k }}</span>{% endfor %}</p>{% endif %}
+        {% if f.project or f.kit %}<p class="tags">{% if f.project %}<span class="tag project">{{ f.project }}</span>{% endif %}{% for k in f.kit %}<span class="tag mono">{{ k }}</span>{% endfor %}</p>{% endif %}
       </div>
     </li>
     {% endfor %}

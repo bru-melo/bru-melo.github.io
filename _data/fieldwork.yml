@@ -1,18 +1,20 @@
 # Field campaigns and deployments, newest first.
-# Fields: years, title, place, role, kit (list of instruments), detail, link (optional)
+# Fields: years, title, project (shown as a tag), place, role, kit (list of instruments), detail, link (optional)
 
-# CHECK: add ship name, sea area, number of OBSs and project name if wanted
+# CHECK: add ship name, sea area and number of OBSs if wanted
 - years: Nov 2026
-  title: Ocean-bottom seismometer deployment cruise
+  title: OBS deployment cruise
+  project: SolasMara
   place: Irish offshore, with the Marine Institute
-  role: Scientific party
-  kit: [Ocean-bottom seismometers]
+  role: Scientific lead
+  kit: [OBS]
   detail: >-
-    Ship-based deployment of ocean-bottom seismometers (OBSs), carried out in
-    coordination with the Marine Institute, sailing on 13 November 2026.
+    Ship-based deployment of OBSs, carried out in coordination with the
+    Marine Institute, sailing on 13 November 2026.
 
 - years: 2025–now
   title: SmartScape city-scale DAS deployment
+  project: SmartScape
   place: Dublin, Ireland
   role: Deployment lead
   kit: [ASN OptoDAS, telecom fibre]
@@ -24,31 +26,25 @@
 # CHECK: confirm the year of the pilot
 - years: 2025
   title: Grangegorman DAS pilot
+  project: SmartScape
   place: Dublin, Ireland
   role: Field team
   kit: [FEBUS A1]
   detail: >-
     23-day pilot recording ahead of the city-loop deployment.
 
-- years: 2025–now
-  title: DAS calibration experiments
-  place: Dublin, Ireland
-  role: Lead
-  kit: [DAS, dark fibre]
-  detail: >-
-    Controlled experiments to calibrate the DAS response and locate channels
-    along the fibre, including tram-stop calibration on the Luas Green Line.
-
 # Templates, uncomment and edit:
 # - years: 2018
 #   title: SEA-SEIS North Atlantic expedition
+#   project: SEA-SEIS
 #   place: RV Celtic Explorer, North Atlantic
 #   role: Scientific party
-#   kit: [Ocean-bottom seismometers]
-#   detail: Deployment of broadband ocean-bottom seismometers between Ireland and Iceland.
+#   kit: [OBS]
+#   detail: Deployment of broadband OBSs between Ireland and Iceland.
 #
 # - years: 2027 (planned)
 #   title: Seabed reference array cruise
+#   project: SolasMara
 #   place: RV Celtic Explorer, west of Belmullet
 #   role: Chief Scientist
 #   kit: [OBS, pressure sensors, ADCP, CTD]
