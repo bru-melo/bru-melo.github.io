@@ -156,6 +156,7 @@ p { margin: 0 0 .8em; }
 a.tag:hover { border-color: var(--accent); color: var(--accent); }
 .tag.mono { font-family: var(--mono); font-weight: 400; }
 .tag.award { background: var(--warm-soft); color: var(--warm); border-color: transparent; }
+.tag.project { background: var(--accent-soft); color: var(--accent); border-color: transparent; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; }
 
 /* publications */
