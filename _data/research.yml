@@ -3,7 +3,7 @@
 - title: SmartScape
   subtitle: DAS on Dublin's telecom fibre
   status: now
-  years: 2025–now
+  years: 2025–2026
   blurb: >-
     Turning an 80 km telecom fibre loop under Dublin into a city-scale
     Distributed Acoustic Sensing array, to map traffic, environmental noise and
@@ -15,11 +15,13 @@
 - title: SolasMara
   subtitle: Listening to the deep North Atlantic
   status: now
-  years: Research Ireland Postdoctoral Fellowship
+  years: 2026–now
   blurb: >-
-    Using the IRIS submarine cable between Ireland and Iceland (~1,700 km) to
-    monitor deep North Atlantic circulation with DAS and microwave-frequency
-    fibre interferometry.
+    Monitoring deep North Atlantic circulation along the IRIS submarine cable
+    between Ireland and Iceland (~1,700 km), combining DAS and
+    microwave-frequency fibre interferometry with ocean-bottom seismometers,
+    pressure sensors and ADCPs. Funded by a Research Ireland Government of
+    Ireland Postdoctoral Fellowship.
   partners: [DIAS, Research Ireland]
 
 - title: The Irish crust

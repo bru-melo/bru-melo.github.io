@@ -1,5 +1,9 @@
 experience:
-  - years: 2025–now
+  - years: 2026–now
+    title: Postdoctoral Researcher
+    place: Dublin Institute for Advanced Studies
+    detail: SolasMara — deep North Atlantic monitoring on the IRIS Ireland–Iceland cable and ocean-bottom instruments. Funded by a Research Ireland Government of Ireland Postdoctoral Fellowship.
+  - years: 2025–2026
     title: Postdoctoral Researcher
     place: Dublin Institute for Advanced Studies
     detail: SmartScape — DAS on Dublin City telecom fibres. Funded by iCRAG & CONNECT.
@@ -27,6 +31,9 @@ education:
     detail: "Non-linear dynamics applied to earthquake prediction. Supervisor: Romuel Machado."
 
 awards:
+  - year: 2026
+    title: Government of Ireland Postdoctoral Fellowship, Research Ireland
+    detail: SolasMara, 2026–2028
   - year: 2025
     title: Best Paper of 2025, Gondwana Research
     detail: for SACI-24
